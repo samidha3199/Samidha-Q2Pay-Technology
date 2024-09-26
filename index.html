@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Fontawesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar  -->
+    <header class="nav__lg">
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="images/Logo.svg" alt="Logo">
+            </a>
+            <nav>
+                <ul class="nav__menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Transactions <i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="index.html">Accounts <i class="fa-solid fa-caret-down"></i></a></li>
+                </ul>
+            </nav>
+            <ul class="nav__icons">
+                <li>
+                    <span class="notification-wrapper">
+                        <span>03</span>
+                        <i class="fa-solid fa-bell"></i>
+                    </span>
+                </li>
+                <li class="user-item">
+                    <span class="user__bg"><i class="fa-regular fa-user"></i></span>
+                </li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Mobile Screen  -->
+    <header class="nav__sm">
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="images/LogoSmall.svg" alt="Logo">
+            </a>
+            <ul class="nav__menu">
+                <li>
+                    <a href="">
+                        <img src="images/Bell.svg" alt="Img">
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="images/Bullhorn.svg" alt="Img">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container header__container">
+            <h2>Entity Details</h2>
+            <div>
+                <h1>Q2pay Technologies Pvt. Ltd.</h1>
+                <p>Entity name</p>
+            </div>
+            <div>
+                <h1> <span>₹ 120.89 Cr</span> in <span>456</span>  accounts</h1>
+                <p>Total balance - updated 5 hrs ago</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar  -->
+
+
+    <!-- Transaction and Account Sections  -->
+
+    <section class="transaction_beneficiary">
+        <div class="container section__container">
+            <!-- Left Side  -->
+            <div class="user__content">
+                <div class="user-info">
+                    <div>
+                        <img src="images/user.png" alt="Img">
+                    </div>
+                    <h1>Welcome back, <span>Akshat Nigam</span> </h1>
+                </div>
+
+                <div class="cards__wrapper">
+                    <article class="section-header">
+                        <div class="section-title">
+                            <img src="images/arrows.svg" alt="Img">
+                            <h1>Transactions</h1>
+                        </div>
+                        <div class="view">
+                            <p>View All</p>
+                            <img src="images/rightAngle.svg" alt="Img">
+                        </div>
+                    </article>
+                    <article class="cards">
+                        <div class="card primary-card">
+                            <div>
+                                <h1>3,46,76,434</h1>
+                                <p>Beneficiary transactions</p>
+                            </div>
+                            <div>
+                                <h1>694</h1>
+                                <p>Internal transactions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card card-list">
+                            <!-- Pay Card -->
+                            <div class="card-item" id="pay-card">
+                                <div class="pay-original">
+                                    <img src="images/Pay.svg" alt="Img">
+                                    <h1>Pay</h1>
+                                    <p>Create an outgoing transaction</p>
+                                </div>
+                                <div class="pay-modified hidden">
+                                    <button id="pay-button">
+                                        <img src="images/back.svg" alt="Img">
+                                        Pay
+                                    </button>
+                                    <p>Select the transaction type you want to create</p>
+                                </div>
+                            </div>
+                        
+                            <!-- Receive Card -->
+                            <div class="card-item" id="receive-card">
+                                <div class="receive-original">
+                                    <img src="images/Receive.svg" alt="Img">
+                                    <h1>Receive</h1>
+                                    <p>Create an incoming transaction</p>
+                                </div>
+                                <div class="receive-modified hidden">
+                                    <img src="images/beneficiary.svg" alt="Img">
+                                    <h1>Beneficiary</h1>
+                                    <p>Select category and pay a beneficiary</p>
+                                </div>
+                            </div>
+                        
+                            <!-- Approve Card -->
+                            <div class="card-item" id="approve-card">
+                                <div class="approve-original">
+                                    <img src="images/Approve.svg" alt="Img">
+                                    <h1>Approve</h1>
+                                    <p>Approve created transactions</p>
+                                </div>
+                                <div class="approve-modified hidden">
+                                    <img src="images/Internal.svg" alt="Img">
+                                    <h1>Internal</h1>
+                                    <p>Transfer funds from one owner account to another</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="cards__wrapper">
+                    <article class="section-header">
+                        <div class="section-title">
+                            <img src="images/beneficiaryAccounts.svg" alt="Img">
+                            <h1>Beneficiary Accounts</h1>
+                        </div>
+                        <div class="view">
+                            <p>View All</p>
+                            <img src="images/rightAngle.svg" alt="Img">
+                        </div>
+                    </article>
+                    <article class="cards">
+                        <div class="card primary-card">
+                            <div>
+                                <h1>303</h1>
+                                <p>Pending accounts</p>
+                            </div>
+                            <div>
+                                <h1>03</h1>
+                                <p>Approved accounts</p>
+                            </div>
+                        </div>
+                        <div class="card card-list">
+                            <div class="card-item">
+                                <img src="images/Create.svg" alt="Img">
+                                <h1>Create</h1>
+                                <p>Create a beneficiary account</p>
+                            </div>
+                            <div class="card-item">
+                                <img src="images/Approve.svg" alt="Img">
+                                <h1>Approve</h1>
+                                <p>Approve created accounts</p>
+                            </div>
+                            <div class="card-item visiblity">
+                                <img src="images/Approve.svg" alt="Img">
+                                <h1>Approve</h1>
+                                <p>Approve created transactions</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Left Side  -->
+
+            <!-- Right Side  -->
+            <div class="tabs__section">
+                <div class="tab tab-navigation">
+                    <button class="tablinks tablinks__w" onclick="openTabs(event, 'EntityDetails')" id="defaultOpen">
+                        <img src="images/EntityDetails.svg" alt="Img">
+                        <p>Entity Details</p>
+                    </button>
+                    <button class="tablinks tablinks__w" onclick="openTabs(event, 'HolidayCalendar')">
+                        <img src="images/date_filter.svg" alt="Img">
+                        <p>Upcoming bank holidays</p>
+                    </button>
+                </div>
+                  
+                <div id="EntityDetails" class="tabcontent tab-panel">
+
+                    <div class="entity-summary">
+                        <div class="entity-name-section">
+                            <h1>Q2pay Technologies Pvt. Ltd.</h1>
+                            <p>Entity Name</p>
+                        </div>
+                        <div class="balance-summary-section">
+                            <h2 class="balance-details">
+                                <span>₹ 120.89</span> in <span>465</span> accounts
+                            </h2>
+                            <p>Total balance - in crores</p>
+                        </div>
+                    </div>
+
+                    <div class="balance-summary">
+                        <h1>Balances Summary</h1>
+                        <span class="view-wrapper">
+                            <span>View</span>
+                            <img src="images/rightAngle.svg" alt="Img">
+                        </span>
+                    </div>
+
+                    <div class="balance-overview">
+                        <article class="balance__card">
+                            <div class="financial-details">
+                                <div class="account-number-section">
+                                    <h1>7834 •••• 0892</h1>
+                                    <p>Account number</p>
+                                </div>
+                                <div class="balance-container">
+                                    <h1>₹ 12,22,000.00</h1>
+                                    <p>Balance - 25 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="refresh-section">
+                                <i class="fa-solid fa-rotate-right refresh-icon"></i>
+                            </div>
+                        </article>
+
+                        <article class="balance__card">
+                            <div class="financial-details">
+                                <div class="account-number-section">
+                                    <h1>7834 •••• 0892</h1>
+                                    <p>Account number</p>
+                                </div>
+                                <div class="balance-container">
+                                    <h1>₹ 12,22,000.00</h1>
+                                    <p>Balance - 25 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="refresh-section">
+                                <i class="fa-solid fa-rotate-right refresh-icon"></i>
+                            </div>
+                        </article>
+
+                        <article class="balance__card">
+                            <div class="financial-details">
+                                <div class="account-number-section">
+                                    <h1>7834 •••• 0892</h1>
+                                    <p>Account number</p>
+                                </div>
+                                <div class="balance-container">
+                                    <h1>₹ 12,22,000.00</h1>
+                                    <p>Balance - 25 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="refresh-section">
+                                <i class="fa-solid fa-rotate-right refresh-icon"></i>
+                            </div>
+                        </article>
+
+                        <article class="balance__card">
+                            <div class="financial-details">
+                                <div class="account-number-section">
+                                    <h1>7834 •••• 0892</h1>
+                                    <p>Account number</p>
+                                </div>
+                                <div class="balance-container">
+                                    <h1>₹ 12,22,000.00</h1>
+                                    <p>Balance - 25 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="refresh-section">
+                                <i class="fa-solid fa-rotate-right refresh-icon"></i>
+                            </div>
+                        </article>
+
+                        <article class="balance__card">
+                            <div class="financial-details">
+                                <div class="account-number-section">
+                                    <h1>7834 •••• 0892</h1>
+                                    <p>Account number</p>
+                                </div>
+                                <div class="balance-container">
+                                    <h1>₹ 12,22,000.00</h1>
+                                    <p>Balance - 25 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="refresh-section">
+                                <i class="fa-solid fa-rotate-right refresh-icon"></i>
+                            </div>
+                        </article>
+
+                        <article class="balance__card">
+                            <div class="financial-details">
+                                <div class="account-number-section">
+                                    <h1>7834 •••• 0892</h1>
+                                    <p>Account number</p>
+                                </div>
+                                <div class="balance-container">
+                                    <h1>₹ 12,22,000.00</h1>
+                                    <p>Balance - 25 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="refresh-section">
+                                <i class="fa-solid fa-rotate-right refresh-icon"></i>
+                            </div>
+                        </article>
+                    </div>
+                    
+                </div>
+                  
+                <div id="HolidayCalendar" class="tabcontent tab-panel">
+
+                    <div class="calendar">
+                        <div class="month">
+                            <div class="month-name">
+                                <h1>January</h1>
+                            </div>
+                            <div class="event">
+                                <div class="date">
+                                    <span>10</span>
+                                    <span>MON</span>
+                                </div>
+                                <div class="event-details">
+                                    <h1>Maharashtra Day/ Labour Day</h1>
+                                    <p>Today</p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="date">
+                                    <span>11</span>
+                                    <span>TUE</span>
+                                </div>
+                                <div class="event-details">
+                                    <h1>Maharashtra Day/ Labour Day</h1>
+                                    <p>Tomorrow</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="month">
+                            <div class="month-name">
+                                <h1>February</h1>
+                            </div>
+                            <div class="event">
+                                <div class="date">
+                                    <span>10</span>
+                                    <span>MON</span>
+                                </div>
+                                <div class="event-details">
+                                    <h1>Maharashtra Day/ Labour Day</h1>
+                                    <p>In 1 month</p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="date">
+                                    <span>11</span>
+                                    <span>TUE</span>
+                                </div>
+                                <div class="event-details">
+                                    <h1>Maharashtra Day/ Labour Day</h1>
+                                    <p>In 1 month</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="month">
+                            <div class="month-name">
+                                <h1>March</h1>
+                            </div>
+                            <div class="event">
+                                <div class="date">
+                                    <span>10</span>
+                                    <span>MON</span>
+                                </div>
+                                <div class="event-details">
+                                    <h1>Maharashtra Day/ Labour Day</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- Right Side  -->
+        </div>
+    </section>
+
+    <!-- Transaction and Account Sections  -->
+
+
+    <!-- Transaction and Account Mobile Sections -->
+
+    <section class="txn-beneficiary-mobile">
+        <div class="tab__container">
+            <div class="tab1 txn-beneficiary-tabs" id="txnBeneficiaryTabs">
+                <button class="tablinks1 tablinks__w tab-btn tab__btn1" onclick="txnAccount(event, 'Transistion-mobile')" id="activeTab">
+                    <img src="images/arrows.svg" alt="Img">
+                    Transactions
+                </button>
+                <button class="tablinks1 tablinks__w tab-btn tab__btn2" onclick="txnAccount(event, 'Account-Mobile')">
+                    <i class="fa-solid fa-building-columns"></i>
+                    Accounts
+                </button>
+            </div>
+              
+            <div id="Transistion-mobile" class="tabcontent1 padding">
+                <div class="transaction-actions">
+                    <article class="transaction-item">
+                        <div class="transaction-icon">
+                            <img src="images/Pay.svg" alt="Pay Icon">
+                        </div>
+                        <div class="transaction-details">
+                            <h1>Pay</h1>
+                            <p>Create an outgoing transaction</p>
+                        </div>
+                    </article>
+                    <article class="transaction-item">
+                        <div class="transaction-icon">
+                            <img src="images/Receive.svg" alt="Receive Icon">
+                        </div>
+                        <div class="transaction-details">
+                            <h1>Receive</h1>
+                            <p>Create an incoming transaction</p>
+                        </div>
+                    </article>
+                    <article class="transaction-item">
+                        <div class="transaction-icon">
+                            <img src="images/Approve.svg" alt="Approve Icon">
+                        </div>
+                        <div class="transaction-details">
+                            <h1>Approve</h1>
+                            <p>Approve created transactions</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+              
+            <div id="Account-Mobile" class="tabcontent1 padding">
+                <div class="transaction-actions">
+                    <article class="transaction-item">
+                        <div class="transaction-icon">
+                            <img src="images/beneficiary.svg" alt="Beneficiary Icon">
+                        </div>
+                        <div class="transaction-details">
+                            <h1>Beneficiary</h1>
+                            <p>Select category and pay a beneficiary</p>
+                        </div>
+                    </article>
+                    <article class="transaction-item">
+                        <div class="transaction-icon">
+                            <img src="images/Internal.svg" alt="Internal Transfer Icon">
+                        </div>
+                        <div class="transaction-details">
+                            <h1>Internal</h1>
+                            <p>Transfer funds from one owner account to another</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Transaction and Account Mobile Sections -->
+
+    <!-- Upcoming Holidays  -->
+
+    <section class="upcoming-holidays">
+        <div class="upcoming-holidays__header">
+            <h1 class="upcoming-holidays__title">Upcoming Bank Holidays</h1>
+            <div class="upcoming-holidays__icon">
+                <img src="images/rightAngle.svg" alt="Right Angle Icon">
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Upcoming Holidays  -->
+
+    <!-- Footer  -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__item">
+                <span class="footer__iconCircle">
+                    <i class="fa-solid fa-house" id="home-icon"></i>
+                </span>
+                <p class="footer__text">Home</p>
+            </div>
+    
+            <div class="footer__item">
+                <span class="footer__icon">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </span>
+                <p class="footer__text">Transactions</p>
+            </div>
+    
+            <div class="footer__item">
+                <span class="footer__icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                </span>
+                <p class="footer__text">Accounts</p>
+            </div>
+    
+            <div class="footer__item">
+                <span class="footer__icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <p class="footer__text">Profile</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- Footer  -->
+
+    <script src="script.js"></script>
+</body>
+</html>
